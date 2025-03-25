@@ -348,16 +348,6 @@
                                             1_073_741_824).toFixed(2) %> GB
                                 </span></div>
 
-                            <% const unixTimestamp=1744484609; // تبدیل به میلی‌ثانیه و ایجاد شیء Date const date=new
-                                Date(unixTimestamp * 1000); // استخراج بخش‌های تاریخ const year=date.getFullYear();
-                                const month=String(date.getMonth() + 1).padStart(2, '0' ); // ماه از ۰ شروع می‌شود const
-                                day=String(date.getDate()).padStart(2, '0' ); const
-                                hours=String(date.getHours()).padStart(2, '0' ); const
-                                minutes=String(date.getMinutes()).padStart(2, '0' ); const
-                                seconds=String(date.getSeconds()).padStart(2, '0' ); // ایجاد رشته تاریخ به فرمت Y-m-d
-                                H:i:s const formattedDate=`${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; %>
-
-
                                 <div class="bg-gray-200 dark:bg-gray-900 rounded-full h-6 mt-5 drop-shadow-lg overflow-hidden"
                                     role="progressbar" :aria-valuenow="width" aria-valuemin="0" aria-valuemax="100">
                                     <div class="progress-bar rounded-full h-6 text-center w-full dark:text-white text-black text-sm transition leading-6"
@@ -366,36 +356,43 @@
                                     </div>
                                 </div>
 
-
                                 <div class="dark:text-white text-black mt-5 text-center"><span class="font-bold"
                                         x-text="$t('remainingDays')"></span><span>
-                                        <%= formattedDate %>
-                                    </span></div>
-                                <!--2023/06/31 10:43:59-->
-
-
-
-
-
-                                <div class="dark:text-white text-black mt-5 text-center"><span class="font-bold"
-                                        x-text="$t('remainingDays')"></span><span>
-                                        <% try { if (!data || typeof data.expiryTime==='undefined' ) { throw new
-                                            Error("data یا expiryTime تعریف نشده است."); } const
-                                            expiryTime=parseInt(data.expiryTime, 10); if (isNaN(expiryTime)) { throw new
-                                            Error("expiryTime یک عدد معتبر نیست."); } const currentTime=Date.now(); if
-                                            (expiryTime===0) { %>
-                                            بدون محدودیت
-                                            <% } else if (expiryTime> currentTime) {
-                                                const remainingDays = Math.floor((expiryTime - currentTime) / (1000 * 60
-                                                * 60 * 24));
-                                                %>
+                                            <% 
+                                            try {
+                                              if (!data || typeof data.expiryTime === 'undefined') {
+                                                throw new Error("data یا expiryTime تعریف نشده است.");
+                                              }
+                                              
+                                              const expiryTime = parseInt(data.expiryTime, 10);
+                                              
+                                              if (isNaN(expiryTime)) {
+                                                throw new Error("expiryTime یک عدد معتبر نیست.");
+                                              }
+                                              
+                                              const currentTime = Date.now();
+                                              
+                                              if (expiryTime === 0) { 
+                                            %>
+                                                بدون محدودیت
+                                            <% 
+                                              } else if (expiryTime > currentTime) {
+                                                const remainingDays = Math.floor((expiryTime - currentTime) / (1000 * 60 * 60 * 24));
+                                            %>
                                                 <%= remainingDays %>
-                                                    <% } else { %>
-                                                        منقضی شده
-                                                        <% } } catch (error) { console.error("خطا در محاسبه روزهای
-                                                            باقیمانده:", error.message); %>
-                                                            نامشخص
-                                                            <% } %>
+                                            <%
+                                              } else { 
+                                            %>
+                                                منقضی شده
+                                            <% 
+                                              }
+                                            } catch (error) { 
+                                              console.error("خطا در محاسبه روزهای باقیمانده:", error.message); 
+                                            %>
+                                              نامشخص
+                                            <% 
+                                            } 
+                                            %>
                                     </span><span x-text="$t('remainingDaysSufix')"></span></div>
                         </div>
                     </div>

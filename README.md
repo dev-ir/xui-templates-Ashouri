@@ -1,16 +1,14 @@
 <p align="center">
-  <a href="https://github.com/MuhammadAshouri/marzban-templates" target="_blank" rel="noopener noreferrer" >
-    <img src="https://github.com/MuhammadAshouri/marzban-templates/blob/dca23a0ecbee84839686a1b928a2dc7e8aba4089/template-01/screenshot.jpg" alt="SubPage screenshots" width="800" height="auto">
+  <a href="https://github.com/dev-ir/xui-templates-Ashouri" target="_blank" rel="noopener noreferrer" >
+    <img src="https://raw.githubusercontent.com/dev-ir/xui-templates-Ashouri/refs/heads/master/screenshot.jpg" alt="SubPage screenshots" width="800" height="auto">
   </a>
 </p>
 
 # Usage
 
-First you need to copy [html file](https://github.com/MuhammadAshouri/marzban-templates/blob/master/template-01/index.html) to your sever. You can do it by this:
-
 ```bash
-cd /opt/marzban
-apt install wget
+cd /opt/DVHOST
+apt install wget -y
 wget -O index.html https://raw.githubusercontent.com/MuhammadAshouri/marzban-templates/master/template-01/index.html
 ```
 
@@ -33,9 +31,9 @@ marzban restart
 
 # Edit
 
-You can change default settings from settings variable in index.html, [here](https://github.com/MuhammadAshouri/marzban-templates/blob/120817c45e2af843a3724ba9fe2018519ddc63b4/template-01/index.html#L194C19-L194C19) line 194
+You can change default settings from settings variable in index.html, [here](https://github.com/dev-ir/xui-templates-Ashouri/blob/120817c45e2af843a3724ba9fe2018519ddc63b4/template-01/index.html#L194C19-L194C19) line 194
 
-You can also change tutorial from appsJson variable in index.html, [here](https://github.com/MuhammadAshouri/marzban-templates/blob/3328559ea73e5a884fa0a619332ab1a040221395/template-01/index.html#L112C14-L112C14) line 25
+You can also change tutorial from appsJson variable in index.html, [here](https://github.com/dev-ir/xui-templates-Ashouri/blob/3328559ea73e5a884fa0a619332ab1a040221395/template-01/index.html#L112C14-L112C14) line 25
 
 For tutorial video, you need to set direct link of video to tutorial of json
 
@@ -45,7 +43,7 @@ To change logo you can change src in line 226
 
 # استفاده
 
-ابتدا فایل [html](https://github.com/MuhammadAshouri/marzban-templates/blob/master/template-01/index.html) رو به سرور بفرستید. با دستور زیر میتونید این کارو بکنید:
+ابتدا فایل [html](https://github.com/dev-ir/xui-templates-Ashouri/blob/master/template-01/index.html) رو به سرور بفرستید. با دستور زیر میتونید این کارو بکنید:
 
 ```bash
 cd /opt/marzban
@@ -72,9 +70,9 @@ marzban restart
 
 # ویرایش
 
-تنظیمات پیش فرض رو از خط 194 فایل تغییر دهید: [اینجا](https://github.com/MuhammadAshouri/marzban-templates/blob/120817c45e2af843a3724ba9fe2018519ddc63b4/template-01/index.html#L194C19-L194C19)
+تنظیمات پیش فرض رو از خط 194 فایل تغییر دهید: [اینجا](https://github.com/dev-ir/xui-templates-Ashouri/blob/120817c45e2af843a3724ba9fe2018519ddc63b4/template-01/index.html#L194C19-L194C19)
 
-لیست نرم افزارها رو هم از خط 25 تغییر بدید: [اینجا](https://github.com/MuhammadAshouri/marzban-templates/blob/3328559ea73e5a884fa0a619332ab1a040221395/template-01/index.html#L112C14-L112C14)
+لیست نرم افزارها رو هم از خط 25 تغییر بدید: [اینجا](https://github.com/dev-ir/xui-templates-Ashouri/blob/3328559ea73e5a884fa0a619332ab1a040221395/template-01/index.html#L112C14-L112C14)
 
 برای آموزش هم آدرس direct یک ویدیو رو برای هر نرم افزار توی tutorial بذارید.
 

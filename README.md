@@ -7,7 +7,7 @@
 # Usage
 
 ```bash
-sudo git clone https://github.com/dev-ir/xui-templates-Ashouri.git /opt/DVHOST/views/template/Ashouri/
+sudo git clone https://github.com/dev-ir/xui-templates-Ashouri.git /opt/DVHOST/views/templates/Ashouri/
 ```
 
 # Configuration File
@@ -34,7 +34,7 @@ systemctl status DVHOST_TEMPLATE
 ابتدا فایل رو به سرور بفرستید. با دستور زیر میتونید این کارو بکنید:
 
 ```bash
-sudo git clone https://github.com/dev-ir/xui-templates-Ashouri.git /opt/DVHOST/views/template/Ashouri/
+sudo git clone https://github.com/dev-ir/xui-templates-Ashouri.git /opt/DVHOST/views/templates/Ashouri/
 ```
 سپس دستور زیر وارد کنید تا وارد تنظیمات اصلی شوید
 

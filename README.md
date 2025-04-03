@@ -8,19 +8,22 @@
 
 ```bash
 sudo git clone https://github.com/dev-ir/xui-templates-Ashouri.git /opt/DVHOST/views/templates/Ashouri/
+sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=Ashouri/' /opt/DVHOST/dvhost.config
 ```
 
-# Configuration File
+<details>
+  <summary>Click for configuration file manual</summary>
 
 ```
 nano /opt/DVHOST/dvhost.config
 ```
-
 # Template name 
 ```
 # Replace Template name 
 TEMPLATE_NAME=Ashouri
 ```
+</details>
+
 
 Now you can restart your XUI Panel Subscription Template :
 ```
@@ -35,7 +38,13 @@ systemctl status DVHOST_TEMPLATE
 
 ```bash
 sudo git clone https://github.com/dev-ir/xui-templates-Ashouri.git /opt/DVHOST/views/templates/Ashouri/
+sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=Ashouri/' /opt/DVHOST/dvhost.config
 ```
+
+<details>
+  <summary>📝 روش جایگزین: اضافه کردن مستقیم به فایل</summary>
+
+
 سپس دستور زیر وارد کنید تا وارد تنظیمات اصلی شوید
 
 ```
@@ -47,8 +56,9 @@ nano /opt/DVHOST/dvhost.config
 # Replace Template name 
 TEMPLATE_NAME=Ashouri
 ```
+</details>
 
-حالا مرزبان رو ری‌استارت کنید:
+حالا سرویس ری‌استارت کنید:
 ```
 systemctl restart DVHOST_TEMPLATE
 systemctl status DVHOST_TEMPLATE
